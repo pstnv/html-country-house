@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="аренда, аренда дома, дом в деревне">
+        <title>Аренда дома</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <link rel="icon" href="icon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Open+Sans:wght@700&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
+    <body>
+        <!-- Sprite -->
+        <svg style="display:none;">
+            <symbol id="vkontakte" viewbox="0 0 48 48">
+                <g>
+                    <path d="M45.763,35.202c-1.797-3.234-6.426-7.12-8.337-8.811c-0.523-0.463-0.579-1.264-0.103-1.776 c3.647-3.919,6.564-8.422,7.568-11.143C45.334,12.27,44.417,11,43.125,11l-3.753,0c-1.237,0-1.961,0.444-2.306,1.151 c-3.031,6.211-5.631,8.899-7.451,10.47c-1.019,0.88-2.608,0.151-2.608-1.188c0-2.58,0-5.915,0-8.28 c0-1.147-0.938-2.075-2.095-2.075L18.056,11c-0.863,0-1.356,0.977-0.838,1.662l1.132,1.625c0.426,0.563,0.656,1.248,0.656,1.951 L19,23.556c0,1.273-1.543,1.895-2.459,1.003c-3.099-3.018-5.788-9.181-6.756-12.128C9.505,11.578,8.706,11.002,7.8,11l-3.697-0.009 c-1.387,0-2.401,1.315-2.024,2.639c3.378,11.857,10.309,23.137,22.661,24.36c1.217,0.12,2.267-0.86,2.267-2.073l0-3.846 c0-1.103,0.865-2.051,1.977-2.079c0.039-0.001,0.078-0.001,0.117-0.001c3.267,0,6.926,4.755,8.206,6.979 c0.368,0.64,1.056,1.03,1.8,1.03l4.973,0C45.531,38,46.462,36.461,45.763,35.202z"/>
+                </g>
+            </symbol>
+            <symbol id="whatsapp" viewbox="0 0 24 24">
+                <g>
+                    <path d="M 12.011719 2 C 6.5057187 2 2.0234844 6.478375 2.0214844 11.984375 C 2.0204844 13.744375 2.4814687 15.462563 3.3554688 16.976562 L 2 22 L 7.2324219 20.763672 C 8.6914219 21.559672 10.333859 21.977516 12.005859 21.978516 L 12.009766 21.978516 C 17.514766 21.978516 21.995047 17.499141 21.998047 11.994141 C 22.000047 9.3251406 20.962172 6.8157344 19.076172 4.9277344 C 17.190172 3.0407344 14.683719 2.001 12.011719 2 z M 12.009766 4 C 14.145766 4.001 16.153109 4.8337969 17.662109 6.3417969 C 19.171109 7.8517969 20.000047 9.8581875 19.998047 11.992188 C 19.996047 16.396187 16.413812 19.978516 12.007812 19.978516 C 10.674812 19.977516 9.3544062 19.642812 8.1914062 19.007812 L 7.5175781 18.640625 L 6.7734375 18.816406 L 4.8046875 19.28125 L 5.2851562 17.496094 L 5.5019531 16.695312 L 5.0878906 15.976562 C 4.3898906 14.768562 4.0204844 13.387375 4.0214844 11.984375 C 4.0234844 7.582375 7.6067656 4 12.009766 4 z M 8.4765625 7.375 C 8.3095625 7.375 8.0395469 7.4375 7.8105469 7.6875 C 7.5815469 7.9365 6.9355469 8.5395781 6.9355469 9.7675781 C 6.9355469 10.995578 7.8300781 12.182609 7.9550781 12.349609 C 8.0790781 12.515609 9.68175 15.115234 12.21875 16.115234 C 14.32675 16.946234 14.754891 16.782234 15.212891 16.740234 C 15.670891 16.699234 16.690438 16.137687 16.898438 15.554688 C 17.106437 14.971687 17.106922 14.470187 17.044922 14.367188 C 16.982922 14.263188 16.816406 14.201172 16.566406 14.076172 C 16.317406 13.951172 15.090328 13.348625 14.861328 13.265625 C 14.632328 13.182625 14.464828 13.140625 14.298828 13.390625 C 14.132828 13.640625 13.655766 14.201187 13.509766 14.367188 C 13.363766 14.534188 13.21875 14.556641 12.96875 14.431641 C 12.71875 14.305641 11.914938 14.041406 10.960938 13.191406 C 10.218937 12.530406 9.7182656 11.714844 9.5722656 11.464844 C 9.4272656 11.215844 9.5585938 11.079078 9.6835938 10.955078 C 9.7955938 10.843078 9.9316406 10.663578 10.056641 10.517578 C 10.180641 10.371578 10.223641 10.267562 10.306641 10.101562 C 10.389641 9.9355625 10.347156 9.7890625 10.285156 9.6640625 C 10.223156 9.5390625 9.737625 8.3065 9.515625 7.8125 C 9.328625 7.3975 9.131125 7.3878594 8.953125 7.3808594 C 8.808125 7.3748594 8.6425625 7.375 8.4765625 7.375 z"/>
+                </g>
+            </symbol>
+            <symbol id="telegram" viewbox="0 0 50 50">
+                <g>
+                    <path d="M 44.376953 5.9863281 C 43.889905 6.0076957 43.415817 6.1432497 42.988281 6.3144531 C 42.565113 6.4845113 40.128883 7.5243408 36.53125 9.0625 C 32.933617 10.600659 28.256963 12.603668 23.621094 14.589844 C 14.349356 18.562196 5.2382813 22.470703 5.2382812 22.470703 L 5.3046875 22.445312 C 5.3046875 22.445312 4.7547875 22.629122 4.1972656 23.017578 C 3.9185047 23.211806 3.6186028 23.462555 3.3730469 23.828125 C 3.127491 24.193695 2.9479735 24.711788 3.015625 25.259766 C 3.2532479 27.184511 5.2480469 27.730469 5.2480469 27.730469 L 5.2558594 27.734375 L 14.158203 30.78125 C 14.385177 31.538434 16.858319 39.792923 17.402344 41.541016 C 17.702797 42.507484 17.984013 43.064995 18.277344 43.445312 C 18.424133 43.635633 18.577962 43.782915 18.748047 43.890625 C 18.815627 43.933415 18.8867 43.965525 18.957031 43.994141 C 18.958531 43.994806 18.959437 43.99348 18.960938 43.994141 C 18.969579 43.997952 18.977708 43.998295 18.986328 44.001953 L 18.962891 43.996094 C 18.979231 44.002694 18.995359 44.013801 19.011719 44.019531 C 19.043456 44.030655 19.062905 44.030268 19.103516 44.039062 C 20.123059 44.395042 20.966797 43.734375 20.966797 43.734375 L 21.001953 43.707031 L 26.470703 38.634766 L 35.345703 45.554688 L 35.457031 45.605469 C 37.010484 46.295216 38.415349 45.910403 39.193359 45.277344 C 39.97137 44.644284 40.277344 43.828125 40.277344 43.828125 L 40.310547 43.742188 L 46.832031 9.7519531 C 46.998903 8.9915162 47.022612 8.334202 46.865234 7.7402344 C 46.707857 7.1462668 46.325492 6.6299361 45.845703 6.34375 C 45.365914 6.0575639 44.864001 5.9649605 44.376953 5.9863281 z M 44.429688 8.0195312 C 44.627491 8.0103707 44.774102 8.032983 44.820312 8.0605469 C 44.866523 8.0881109 44.887272 8.0844829 44.931641 8.2519531 C 44.976011 8.419423 45.000036 8.7721605 44.878906 9.3242188 L 44.875 9.3359375 L 38.390625 43.128906 C 38.375275 43.162926 38.240151 43.475531 37.931641 43.726562 C 37.616914 43.982653 37.266874 44.182554 36.337891 43.792969 L 26.632812 36.224609 L 26.359375 36.009766 L 26.353516 36.015625 L 23.451172 33.837891 L 39.761719 14.648438 A 1.0001 1.0001 0 0 0 38.974609 13 A 1.0001 1.0001 0 0 0 38.445312 13.167969 L 14.84375 28.902344 L 5.9277344 25.849609 C 5.9277344 25.849609 5.0423771 25.356927 5 25.013672 C 4.99765 24.994652 4.9871961 25.011869 5.0332031 24.943359 C 5.0792101 24.874869 5.1948546 24.759225 5.3398438 24.658203 C 5.6298218 24.456159 5.9609375 24.333984 5.9609375 24.333984 L 5.9941406 24.322266 L 6.0273438 24.308594 C 6.0273438 24.308594 15.138894 20.399882 24.410156 16.427734 C 29.045787 14.44166 33.721617 12.440122 37.318359 10.902344 C 40.914175 9.3649615 43.512419 8.2583658 43.732422 8.1699219 C 43.982886 8.0696253 44.231884 8.0286918 44.429688 8.0195312 z M 33.613281 18.792969 L 21.244141 33.345703 L 21.238281 33.351562 A 1.0001 1.0001 0 0 0 21.183594 33.423828 A 1.0001 1.0001 0 0 0 21.128906 33.507812 A 1.0001 1.0001 0 0 0 20.998047 33.892578 A 1.0001 1.0001 0 0 0 20.998047 33.900391 L 19.386719 41.146484 C 19.35993 41.068197 19.341173 41.039555 19.3125 40.947266 L 19.3125 40.945312 C 18.800713 39.30085 16.467362 31.5161 16.144531 30.439453 L 33.613281 18.792969 z M 22.640625 35.730469 L 24.863281 37.398438 L 21.597656 40.425781 L 22.640625 35.730469 z"/>
+                </g>
+            </symbol>
+            <symbol id="email" viewbox="0 0 64 64">
+                <g>
+                    <path id="Mail" d="M58.0034485,8H5.9965506c-3.3136795,0-5.9999995,2.6862001-5.9999995,6v36c0,3.3137016,2.6863203,6,5.9999995,6
+                        h52.006897c3.3137016,0,6-2.6862984,6-6V14C64.0034485,10.6862001,61.3171501,8,58.0034485,8z M62.0034485,49.1108017
+                        L43.084549,30.1919994l18.9188995-12.0555992V49.1108017z M5.9965506,10h52.006897c2.2056007,0,4,1.7943001,4,4v1.7664003
+                        L34.4677505,33.3134003c-1.4902,0.9492989-3.3935013,0.9199982-4.8495998-0.0703011L1.9965508,14.4694996V14
+                        C1.9965508,11.7943001,3.7910507,10,5.9965506,10z M1.9965508,16.8852005L21.182251,29.9251003L1.9965508,49.1108017V16.8852005z
+                        M58.0034485,54H5.9965506c-1.6473999,0-3.0638998-1.0021019-3.6760998-2.4278984l20.5199013-20.5200024l5.6547985,3.843401
+                        c1.0859013,0.7383003,2.3418007,1.1083984,3.5995998,1.1083984c1.1953011,0,2.3925018-0.3339996,3.4463005-1.0048981
+                        l5.8423996-3.7230015l20.2961006,20.2961025C61.0673485,52.9978981,59.6508713,54,58.0034485,54z"/>
+                </g>
+            </symbol>
+            <symbol id="close" viewbox="0 0 256 256">
+                <g>
+                    <path d="M137.051,128l75.475-75.475c2.5-2.5,2.5-6.551,0-9.051s-6.551-2.5-9.051,0L128,118.949L52.525,43.475  c-2.5-2.5-6.551-2.5-9.051,0s-2.5,6.551,0,9.051L118.949,128l-75.475,75.475c-2.5,2.5-2.5,6.551,0,9.051  c1.25,1.25,2.888,1.875,4.525,1.875s3.275-0.625,4.525-1.875L128,137.051l75.475,75.475c1.25,1.25,2.888,1.875,4.525,1.875  s3.275-0.625,4.525-1.875c2.5-2.5,2.5-6.551,0-9.051L137.051,128z"/>
+                </g>
+            </symbol>
+        </svg>
+        <header class="header" id="header">
+            <div class="container">
+                <div class="header__inner">
+                    <a class="header__logo nav__link" href="#header">
+                        <img class="header__image" src="https://cdn.glitch.global/67c0198d-55d2-4324-bee4-790cd562b6ff/pic_logo.png?v=1642696806653">
+                    </a>
+                    <nav id="nav" class="nav">
+                        <a href="#features" class="nav__link linkStyle">Почему мы</a>
+                        <a href="#houses" class="nav__link linkStyle">Объекты</a>
+                        <a href="#team" class="nav__link linkStyle">Наша команда</a>
+                        <a href="#reviews" class="nav__link linkStyle">Отзывы</a>
+                        <a href="#rent" class="nav__link linkStyle">Контакты</a>
+                    </nav>
+                    <button id="navToggle" class="burger" type="button">                  
+                        <span class="burger__item">Menu</span>
+                    </button>                    
+                </div> <!-- /header__inner -->
+            </div> <!-- /container -->
+        </header>
+        <div class="intro" id="intro">
+            <div class="container">
+                <div class="intro__inner">
+                    <h1 class="intro__title">Сельский домик</h1>
+                    <h2 class="intro__subtitle"><span class="term">На день. </span><span class="term">На месяц. </span><span class="term">Навсегда.</span></h2>
+                    <a href="#" class="btn btn--color"> Арендовать </a>
+                </div>
+            </div>
+        </div>
+        <!-- FEATURES -->
+        <div class="container" id="features">
+            <div class="features">
+                <div class="features__item">
+                    <img class="features__icon" src="https://cdn.glitch.global/67c0198d-55d2-4324-bee4-790cd562b6ff/pic_logo_ecology.png?v=1642696533885">
+                    <h4 class="features__title">экологично</h4>
+                    <div class="features__text">наши дома построены с соблюдением всех норм 
+                        экологической безопасности, с применением природосберегающих и 
+                        энергосберегающих технологий
+                    </div>
+                </div>
+                <div class="features__item">
+                    <img class="features__icon" src="https://cdn.glitch.global/67c0198d-55d2-4324-bee4-790cd562b6ff/pic_logo_style.png?v=1642696562867">
+                    <h4 class="features__title">на ваш вкус</h4>
+                    <div class="features__text">подберем дом согласно вашему вкусу - будь это 
+                        коттедж в европейском стиле, старинный замок или традиционная русская 
+                        изба
+                    </div>
+                </div>
+                <div class="features__item">
+                    <img class="features__icon" src="https://cdn.glitch.global/67c0198d-55d2-4324-bee4-790cd562b6ff/pic_logo_sizes.png?v=1642696557398">
+                    <h4 class="features__title">разные размеры</h4>
+                    <div class="features__text">сделаем всё для комфортного размещения вас
+                        и ваших гостей - просто сообщите о ваших пожеланиях
+                    </div>
+                </div>
+                <div class="features__item">
+                    <img class="features__icon" src="https://cdn.glitch.global/67c0198d-55d2-4324-bee4-790cd562b6ff/pic_logo_location.png?v=1642696539331">
+                    <h4 class="features__title">любые локации</h4>
+                    <div class="features__text">дома расположены по всему материку, 
+                        выбирайте любое направление - расскажем как
+                        и поможем добраться
+                    </div>
+                </div>
+                <div class="features__item">
+                    <img class="features__icon" src="https://cdn.glitch.global/67c0198d-55d2-4324-bee4-790cd562b6ff/pic_logo_pay.png?v=1642696551000">
+                    <h4 class="features__title">удобная система платежей</h4>
+                    <div class="features__text">мы принимаем все виды оплаты и предоставляем 
+                        беспроцентную рассрочку с индивидуальными условиями
+                    </div>
+                </div>
+                <div class="features__item">
+                    <img class="features__icon" src="https://cdn.glitch.global/67c0198d-55d2-4324-bee4-790cd562b6ff/pic_logo_open.png?v=1642696545890">
+                    <h4 class="features__title">всегда на связи</h4>
+                    <div class="features__text">мы работаем круглосуточно без выходных и готовы 
+                        ответить на любые ваши вопросы и воплотить ваши желания
+                    </div>
+                </div>
+            </div>
+            <!-- /features  -->
+        </div>
+        <!-- OBJECTS -->
+        <div class="houses" id="houses">
+            <div class="houses__item">
+                <img class="houses__image" src="https://cdn.glitch.global/67c0198d-55d2-4324-bee4-790cd562b6ff/pic_house%20(1).jpg?v=1642696575151" >
+                <div class="houses__content">
+                    <div class="houses__title"> Наши дома </div>
+                    <div class="houses__text"> Готовы к вашему приезду </div>
+                </div>
+            </div>
+            <div class="houses__item">
+                <img class="houses__image" src="https://cdn.glitch.global/67c0198d-55d2-4324-bee4-790cd562b6ff/pic_house%20(2).jpg?v=1642696579908" >
+                <div class="houses__content">
+                    <div class="houses__title"> Наши дома </div>
+                    <div class="houses__text"> Готовы к вашему приезду </div>
+                </div>
+            </div>
+            <div class="houses__item">
+                <img class="houses__image" src="https://cdn.glitch.global/67c0198d-55d2-4324-bee4-790cd562b6ff/pic_house%20(3).jpg?v=1642696586508" >
+                <div class="houses__content">
+                    <div class="houses__title"> Наши дома </div>
+                    <div class="houses__text"> Готовы к вашему приезду </div>
+                </div>
+            </div>
+            <div class="houses__item">
+                <img class="houses__image" src="https://cdn.glitch.global/67c0198d-55d2-4324-bee4-790cd562b6ff/pic_house%20(4).jpg?v=1642696591135" >
+                <div class="houses__content">
+                    <div class="houses__title"> Наши дома </div>
+                    <div class="houses__text"> Готовы к вашему приезду </div>
+                </div>
+            </div>
+            <div class="houses__item">
+                <img class="houses__image" src="https://cdn.glitch.global/67c0198d-55d2-4324-bee4-790cd562b6ff/pic_house%20(5).jpg?v=1642696605674" >
+                <div class="houses__content">
+                    <div class="houses__title"> Наши дома </div>
+                    <div class="houses__text"> Готовы к вашему приезду </div>
+                </div>
+            </div>
+            <div class="houses__item">
+                <img class="houses__image" src="https://cdn.glitch.global/67c0198d-55d2-4324-bee4-790cd562b6ff/pic_house%20(6).jpg?v=1642696612870" >
+                <div class="houses__content">
+                    <div class="houses__title"> Наши дома </div>
+                    <div class="houses__text"> Готовы к вашему приезду </div>
+                </div>
+            </div>
+            <div class="houses__item">
+                <img class="houses__image" src="https://cdn.glitch.global/67c0198d-55d2-4324-bee4-790cd562b6ff/pic_house%20(7).jpg?v=1642696617765" >
+                <div class="houses__content">
+                    <div class="houses__title"> Наши дома </div>
+                    <div class="houses__text"> Готовы к вашему приезду </div>
+                </div>
+            </div>
+            <div class="houses__item">
+                <img class="houses__image" src="https://cdn.glitch.global/67c0198d-55d2-4324-bee4-790cd562b6ff/pic_house%20(8).jpg?v=1642696624400" >
+                <div class="houses__content">
+                    <div class="houses__title"> Наши дома </div>
+                    <div class="houses__text"> готовы к вашему приезду </div>
+                </div>
+            </div>
+
+            
+            <!-- <div class="houses__item">
+                <img class="houses__image" src="https://cdn.glitch.global/67c0198d-55d2-4324-bee4-790cd562b6ff/pic_house%20(5).jpg?v=1642696605674" >
+                <div class="houses__content">
+                    <div class="houses__title"> Наши дома </div>
+                    <div class="houses__text"> Готовы к вашему приезду </div>
+                </div>
+            </div>
+            <div class="houses__item">
+                <img class="houses__image" src="https://cdn.glitch.global/67c0198d-55d2-4324-bee4-790cd562b6ff/pic_house%20(6).jpg?v=1642696612870" >
+                <div class="houses__content">
+                    <div class="houses__title"> Наши дома </div>
+                    <div class="houses__text"> Готовы к вашему приезду </div>
+                </div>
+            </div>
+            <div class="houses__item">
+                <img class="houses__image" src="https://cdn.glitch.global/67c0198d-55d2-4324-bee4-790cd562b6ff/pic_house%20(7).jpg?v=1642696617765" >
+                <div class="houses__content">
+                    <div class="houses__title"> Наши дома </div>
+                    <div class="houses__text"> Готовы к вашему приезду </div>
+                </div>
+            </div>
+            <div class="houses__item">
+                <img class="houses__image" src="https://cdn.glitch.global/67c0198d-55d2-4324-bee4-790cd562b6ff/pic_house%20(8).jpg?v=1642696624400" >
+                <div class="houses__content">
+                    <div class="houses__title"> Наши дома </div>
+                    <div class="houses__text"> готовы к вашему приезду </div>
+                </div>
+            </div> -->
+        </div>
+        <!-- /houses  -->
+        <!-- TEAM -->
+        <div class="team" id="team">
+            <div class="container">
+                <div class="team__inner">
+                    <div class="team__item">
+                        <img class="team__photo" src="https://cdn.glitch.global/67c0198d-55d2-4324-bee4-790cd562b6ff/pic_team%20(3).jpg?v=1642697012232">
+                        <div class="team__name">Анна Двиткова</div>
+                        <div class="team__prof">Основатель</div>
+                        <div class="team__text">
+                            <p> Раз в месяц я беру два выходных от суеты дня
+                                и уезжаю в домик, чтобы 
+                                восстановиться. 
+                            </p>
+                            <p> Попробуйте - вам понравится!
+                            </p>
+                        </div>
+                        <div class="social social--mt">
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#vkontakte"></use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#whatsapp"></use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#telegram"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <!-- /social -->                     
+                    </div>
+                    <div class="team__item">
+                        <img class="team__photo" src="https://cdn.glitch.global/67c0198d-55d2-4324-bee4-790cd562b6ff/pic_team%20(5).jpg?v=1642697024617">
+                        <div class="team__name">Игорь Вениаминов</div>
+                        <div class="team__prof">Сооснователь</div>
+                        <div class="team__text">
+                            <p> Идея нашей компании достаточно проста - 
+                                сменить локацию, отдохнуть и насладиться окружающей
+                                красотой. 
+                            </p>
+                            <p> Я прослежу, чтобы ваши ожидания оправдались. </p>
+                        </div>
+                        <div class="social social--mt">
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#vkontakte"></use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#whatsapp"></use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#telegram"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <!-- /social -->                     
+                    </div>
+                    <div class="team__item">
+                        <img class="team__photo" src="https://cdn.glitch.global/67c0198d-55d2-4324-bee4-790cd562b6ff/pic_team%20(1).jpg?v=1642697001254">
+                        <div class="team__name">Екатерина Сычева</div>
+                        <div class="team__prof">Дизайнер</div>
+                        <div class="team__text">
+                            <p> У каждого дома есть своя история. Моя цель - помочь вам
+                                ощутить его атмосферу.
+                            </p>
+                            <p> Я добавляю детали, 
+                                чтобы сделать ваш отдых комфортным и незабываемым. 
+                            </p>
+                        </div>
+                        <div class="social social--mt">
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#vkontakte"></use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#whatsapp"></use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#telegram"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <!-- /social -->                  
+                    </div>
+                    <div class="team__item">
+                        <img class="team__photo" src="https://cdn.glitch.global/67c0198d-55d2-4324-bee4-790cd562b6ff/pic_team%20(6).jpg?v=1642697031677">
+                        <div class="team__name">Ольга Минская</div>
+                        <div class="team__prof">Главный специалист</div>
+                        <div class="team__text">
+                            <p> Я буду с вами на связи 24 часа и помогу 
+                                определиться с выбором, расскажу историю дома, 
+                                организую маршрут и подскажу о красивых местах
+                                поблизости. 
+                            </p>
+                        </div>
+                        <div class="social social--mt">
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#vkontakte"></use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#whatsapp"></use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#telegram"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <!-- /social -->                   
+                    </div>
+                </div>
+                <!-- /team__inner -->
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /team -->
+        <!-- REVIEWS -->
+        <div class="reviews" id="reviews">
+            <div class="container">
+                <div id="reviewsSlider" class="reviews__slider">
+
+                    <div class="one__slider">
+                        <div class="reviews__item">
+                            <div class="reviews__photo">
+                                <img class="reviews__image" src="https://cdn.glitch.global/67c0198d-55d2-4324-bee4-790cd562b6ff/pic_review%20(1).jpg?v=1647757793154">
+                            </div>
+                            <div class="reviews_content">
+                                <div class="reviews__text">
+                                    "Осень началась с каникул! 
+                                    Дом очень понравился. Организация
+                                    на высоком уровне."
+                                </div>
+                                <div class="reviews__author">
+                                    Ольга и Влад
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /reviews__item -->
+                    </div>
+
+                    <div class="one__slider">
+                        <div class="reviews__item">
+                            <div class="reviews__photo">
+                                <img class="reviews__image" src="https://cdn.glitch.global/67c0198d-55d2-4324-bee4-790cd562b6ff/pic_review%20(2).jpg?v=1647757799027">
+                            </div>
+                            <div class="reviews_content">
+                                <div class="reviews__text">
+                                    "Внуки сделали сюрприз. Мы очень довольны."                           
+                                </div>
+                                <div class="reviews__author">
+                                    Ирина и Марсель
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /reviews__item -->
+                    </div>
+
+                    <div class="one__slider">
+                        <div class="reviews__item">
+                            <div class="reviews__photo">
+                                <img class="reviews__image" src="https://cdn.glitch.global/67c0198d-55d2-4324-bee4-790cd562b6ff/pic_review%20(3).jpg?v=1647757806846">
+                            </div>
+                            <div class="reviews_content">
+                                <div class="reviews__text">
+                                    "Лето провели в деревне. 
+                                    Кругом природа, суеты нет, маленькие радости.
+                                    Задумались о переезде."                           
+                                </div>
+                                <div class="reviews__author">
+                                    семья Васениных
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /reviews__item -->
+                    </div>
+
+                    <div class="one__slider">
+                        <div class="reviews__item">
+                            <div class="reviews__photo">
+                                <img class="reviews__image" src="https://cdn.glitch.global/67c0198d-55d2-4324-bee4-790cd562b6ff/pic_review%20(4).jpg?v=1647757812683">
+                            </div>
+                            <div class="reviews_content">
+                                <div class="reviews__text">
+                                    "Важное для нас событие - свадьба - прошло идеально."                           
+                                </div>
+                                <div class="reviews__author">
+                                    Светлана и Арсен
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /reviews__item -->
+                    </div>
+
+
+                </div>
+                <!-- /reviews__slider -->
+
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /reviews -->
+        <!-- RENT -->
+        <div class="rent" id="rent">
+            <div class="container">
+                <h3 class="rent__title"> Готовы обсудить детали? </h3>
+                <div class="rent__text">
+                    <p> Просто нажмите кнопку! </p>
+                </div>
+                <button id="btnContact" class="btn btn--color btn--long">Свяжитесь со мной</button>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__block">
+                        <h4 class="footer__title">Мы находимся</h4>
+                        <address class="footer__address">
+                            <p> Россия </p>
+                            <p> 62000 Свердловская область </p>
+                            <p> г. Екатеринбург, ул. Ленина, дом Короля </p>
+                        </address>
+                    </div>
+                    <div class="footer__block">
+                        <h4 class="footer__title">Наши контакты</h4>
+                        <div class="social social--footer">
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#vkontakte"></use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#whatsapp"></use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="#" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#telegram"></use>
+                                </svg>
+                            </a>
+                            <a class="social__item" href="emailto:" target="_blank">
+                                <svg class="social__icon">
+                                    <use xlink:href="#email"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <!-- /social -->                     
+                    </div>
+                    <div class="footer__block">
+                        <h4 class="footer__title">О Сельском домике</h4>
+                        <div class="footer__text">
+                            <p> Компания образована в 2015 году. </p>
+                            <p> На 2022 год территория охвата ограничена
+                                Евразией, но наша география 
+                                постоянно расширяется. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /footer__inner -->
+            </div>
+            <!-- /container -->
+            <div class="copyright">
+                <div class="container">
+                    <div class="copyright__text">
+                        <div>Copyright © 2022 Selsky Domik.
+                        </div>
+                        <div> Все материалы использованы в учебных целях
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+        <div class="modal-content">
+            <!-- MODAL-заголовок -->
+            <div class="modalHeader">
+                <h3 class="modalHeader__text">Обратная связь</h3>
+                <button id="closeButton"> 
+                    <svg class="modalIcon">
+                        <use xlink:href="#close"></use>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- form -->
+            <form class="form"
+                action="https://formspree.io/f/mzbovyny"
+                method="POST">
+                <!-- можно изменить язык форму, которая всплывает после отправки, 
+                    атрибут value ="", комбинация букв - на сайте Formspree -->
+                    <input type="hidden" name="_language" value="ru"/>
+
+                    <input class="inputModal" type="text" name="name" placeholder="Имя" required>
+                    <input class="inputModal" type="tel" name="phone" placeholder="Телефон" required>
+                    <input class="inputModal" type="email" name="email" placeholder="Email" required>
+                    <textarea class="inputModal" name="message" placeholder="Сообщение (необязательно)"></textarea>
+                <!-- your other form fields go here -->
+                <button id="btnSubmit" type="submit">ОТПРАВИТЬ</button>
+            </form>
+
+        </div>
+        <!-- /modal-content -->
+</div>
+<!-- /MODAL -->
+
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+        <script src="js/script.js"></script>
+
+    </body>
+</html>
